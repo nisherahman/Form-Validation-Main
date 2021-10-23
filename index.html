@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- main form -->
+    <div class="main" id="modal">  
+        <div class="form-container">
+            <form>
+                <h2>Create a new account<span id="closeModal">&times;</span></h2>
+                <p>It's quick and easy.</p> 
+                <div class="input-group-one">
+                   <input type="text" placeholder="Enter your first name" id="firstName">
+                   <small id="firstErr"></small>
+                   <input type="text" placeholder="Enter your surname name" id="surName">
+                   <small id="surErr"></small>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Mobile no or email address" id="userEmail">
+                    <small id="emailErr"></small>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="password" id="pass">
+                    <small id="passErr"></small>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="confirm password" id="rePass">
+                    <small id="rePassErr"></small>
+                </div>
+                
+                <div class="date-title">
+                    <label for="">Date of birth<i class="fas fa-question-circle"></i></label>
+                </div>
+
+                <div class="select">
+                    <select>
+                        <option value="">select date</option>
+                        <script>
+                            for(date=1;date <= 31;date++){
+                                document.write("<option>"+date+"</option>");
+                            }
+                        </script>
+                    </select>
+
+                    <select value="">
+                        <option value="">Selcet month</option>
+                        <option value="">Jnuary</option>
+                        <option value="">February</option>
+                        <option value="">March</option>
+                        <option value="">April</option>
+                        <option value="">May</option>
+                        <option value="">June</option>
+                        <option value="">July</option>
+                        <option value="">August</option>
+                        <option value="">September</option>
+                        <option value="">October</option>
+                        <option value="">November</option>
+                        <option value="">December</option>
+                    </select>
+    
+                    <select>
+                        <option value="">select year</option>
+                        <script>
+                            for(year=2021;year >= 1905;year--){
+                                document.write("<option>" + year +"</option>");
+                            }
+                        </script>
+                    </select>
+                </div>
+
+                <div class="date-title">
+                    <label for="">Gender<i class="fas fa-question-circle"></i></label>
+                </div>
+                <div class="gender">
+                    <div class="gen1">Male<input type="radio" name="gender"></div>
+                    <div class="gen1">Female<input type="radio" name="gender"></div>
+                    <div class="gen1">Custom<input type="radio" name="gender"></div>
+                </div>
+                <button type="submit" onclick="return subm();">sign up</button>
+                <a href="#">Already have an account?</a>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- modal -->
+    <div class="show-form" >
+        <div class="text">
+            <h1>facebook</h1>
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        <div class="form-details">
+            <form>
+                <div class="input-item">
+                    <input type="text" placeholder="email address or phone number">
+                    <small></small>
+                </div>
+                <div class="input-item">
+                    <input type="password" placeholder="password">
+                    <small></small>
+                </div>
+               
+                <button type="submit">log in</button> 
+                <a href="#">Forgotten password?</a>
+                <div class="login">
+                    <button type="button" id="trigger">create new account</button>
+                </div>            
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/custom.js"></script>
+    
+</body>
+</html>
